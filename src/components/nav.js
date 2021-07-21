@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import ResLogo from '../assets/resfeberlogo2.png'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,7 +25,7 @@ function Navbar() {
     <AppBar className={classes.bar} position="static">
       <Toolbar>
         <Link to="/home" className={classes.link}>
-          <Button color="inherit">Home</Button>
+          <img src = {ResLogo} alt = 'resfeber logo' width='50'/>
         </Link>
         <Link to="/photography" className={classes.link}>
           <Button color="inherit">Photography</Button>

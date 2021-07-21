@@ -78,9 +78,10 @@ const useStyles = makeStyles({
   }
 });
 
-export default function Recipes() {
+export default function Photography() {
   const classes = useStyles();
   const [photos, setPhotos] = useState([])
+  console.log('photos', photos)
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -91,6 +92,7 @@ export default function Recipes() {
     }
     getPhotos()
   }, [])
+
 
   return (
     <div className={classes.page}>

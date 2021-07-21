@@ -41,7 +41,7 @@ export default function Enter () {
     {/* <h1 className={classes.title}>Resfeber Studios</h1> */}
     <Link to="/home">
       <video className={classes.logo} autoPlay>
-        <source src='../public/resfeberintro.mp4' type='video/mp4' allow=''></source>
+        <source src='https://www.dropbox.com/s/pfai4s84lwgs0pp/resfeberintro.mp4?raw=1' type='video/mp4' allow='autoplay'></source>
       </video>
     </Link>
     </div>
