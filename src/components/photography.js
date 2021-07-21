@@ -9,10 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import Alert from '@material-ui/lab/Alert';
-import IconButton from '@material-ui/core/IconButton';
-import Collapse from '@material-ui/core/Collapse';
-import CloseIcon from '@material-ui/icons/Close';
+
 
 const useStyles = makeStyles({
   root: {
@@ -69,7 +66,7 @@ const useStyles = makeStyles({
       backgroundColor: '#BDBFBF',
     },
   },
-  recipeTitle: {
+  photoTitle: {
     fontWeight: "bold",
     display: "flex",
     flexDirection: "column",
@@ -93,43 +90,37 @@ export default function Photography() {
     getPhotos()
   }, [])
 
+let galleryCovers = [
+  //URBAN
+  { title : 'Minneapolis', category: 'urban', description: 'A view of the Minneapolis skyline during sunset.', metadata: 'metadata test', image_url: 'https://www.dropbox.com/s/isooru5dx4rkyqy/DJI_0022.jpg?raw=1'},
+  //NATURE
+  { title : 'Vast', category: 'nature', description: 'A top-down view of a section of frozen river.', metadata: 'metadata test', image_url: 'https://www.dropbox.com/s/dnb5jabv90fb30g/Richolson%2C%20Trace.%20VAST.%20archival%20pigment%20ink%20on%20paper%2C%206.6%20x%209.9%20in%2C%202016.jpg?raw=1'},
+  //WEDDINGS
+  ,]
 
   return (
     <div className={classes.page}>
-    <h1 className={classes.title}>A View Through My Eyes</h1>
-    <p className={classes.subheader}>Click on an image to learn more. </p>
+    <h1 className={classes.title}>A World Through My Lens</h1>
+    <p className={classes.subheader}>Click on an image to view the gallery. </p>
 
     <div className={classes.row}>
-      {photos && photos.map(r => {
+      {galleryCovers && galleryCovers.map(r => {
         return (
           <Card key={r.id} className={classes.root}>
-          <Link to={`/photography/${r.id}`} className={classes.link}>
+          <Link to={`/photography/${r.category}`} className={classes.link}>
             <CardActionArea>
             <CardMedia
               className={classes.media}
               image={r.image_url}
-              title={r.title}
+              title={r.category}
             />
             <CardContent className={classes.content}>
-            <Typography gutterBottom variant="h5" component="h2" className={classes.recipeTitle}>
-              {r.title}
+            <Typography gutterBottom variant="h5" component="h2" className={classes.photoTitle}>
+              {r.category }
             </Typography>
             </CardContent>
             </CardActionArea>
           </Link>
-            <CardActions className={classes.page}>
-              <Button linksize="small" color="primary" className={classes.button}
-                onClick={()=>{
-                  fetch('http://localhost:5001/favorites', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json; charset=utf-8'},
-                    body: JSON.stringify({id: r.id, title: r.title, meal_type: r.meal_type, serving_size: r.serving_size, difficulty_level: r.difficulty_level, cooking_time_in_minutes: r.cooking_time_in_minutes, ingredients: r.ingredients, instructions: r.instructions, image_url: r.image_url})
-                    })
-                    .then(setOpen(true))
-                  }}>
-                Add to Favorites
-               </Button>
-            </CardActions>
           </Card>)
     })}
     </div>

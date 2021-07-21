@@ -4,6 +4,7 @@ import Home from './components/home'
 import Photography from './components/photography'
 import Nature from './components/galleries/nature'
 import Festival from './components/festival'
+import CinematicWork from './components/videography'
 // import RecipeDetails from './components/recipeDetails'
 import { Switch, Route} from "react-router-dom";
 import React, { useState, useEffect } from 'react';
@@ -63,7 +64,7 @@ function App() {
                 <Route exact path="/home" component={Home}/>
                 <Route exact path="/photography/" component={Photography}/>
                 <Route exact path="/photography/nature" component={Nature}/>
-                <Route exact path="/photography/" component={Photography}/>
+                <Route exact path="/cinematic_work" component={CinematicWork}/>
                 <Route exact path="/festivals" component={Festival}/>
         </AnimatedSwitch>
 

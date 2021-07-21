@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   title: {
     fontFamily: "'Bebas Neue', 'cursive'",
     fontSize: "10vw",
-    color: "#373940",
+    color: "#a78824",
     marginTop: "3%",
     marginBottom: "0%",
   },

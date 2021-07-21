@@ -30,8 +30,8 @@ function Navbar() {
         <Link to="/photography" className={classes.link}>
           <Button color="inherit">Photography</Button>
         </Link>
-        <Link to="/videography" className={classes.link}>
-          <Button color="inherit">Videography</Button>
+        <Link to="/cinematic_work" className={classes.link}>
+          <Button color="inherit">Cineamtic Work  </Button>
         </Link>
         <Link to="/festivals" className={classes.link}>
           <Button color="inherit">Festival Work</Button>
