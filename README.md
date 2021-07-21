@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Resfeber Studios (frontend)
+This repo is a personal project, where I have built out a portfolio to display all the work I've done DBA Resfeber Studios.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Table of Contents:
+[Description](#what-exactly-is-this)<br/>
+[Installation](#how-do-i-install-this)<br/>
+[Usage](#how-do-i-use-this)<br/>
+[Related Projects](#related-projects)<br/>
+[Team Members](#who-created-this-thing-anyway)<br/>
+[Contributions](#want-to-contribute)<br/>
+[Roadmap](#what-are-our-plans-for-the-future)<br/>
+[Licensing](#licensing)<br/>
 
-## Available Scripts
+# What exactly is this?
+We're so glad you asked.  Robot Kitchen is a website containing a select, currated list of recipes for your tasting enjoyment.  It's a simple way to get the recipe you want without having to read 20 paragraphs about a person.  This really is the ultimate recipe website you've been searching for your whole life.
 
-In the project directory, you can run:
+# How do I install this?
+Easy!  See steps 1 - 53 below.
 
-### `yarn start`
+Kidding.  As this is a personal project, this repo is copyrighted and unavailable for personal use.  :(
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you would like to visit the site, you are more than welcome to do so at: [INSERT LINK HERE]
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# How do I use this?
 
-### `yarn build`
+Click on this link: []
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Related Projects:
+BAckend for this projet: https://github.com/TraceRicholson/trw_backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Who created this thing anyway?
+That's a fantastic question.  One we definitely have an answer to.  First, we'll need you to sign a Non-Disclosure Agreement (NDA).  Just in case the "Ricky" incident happens again.  Poor Ricky...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Now that you've signed that, below is a list of our team members and GitHub usernames in case you want to see other random projects we've created:<br/>
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Trace Richolson (TraceRicholson)<br/>
+Ha.  Gotcha.  It's just me. :)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Want to contribute?
+Too bad, you can't.  This project is for cool kids only. :(
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# What are your plans for the future?
+E V E R Y T H I N G
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Licensing
+This website and repo are property and coprighted by Resfeber Studios, LLC.  Any personal use is unauthorized.  

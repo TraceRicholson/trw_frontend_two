@@ -99,24 +99,6 @@ export default function Photography() {
     <h1 className={classes.title}>A View Through My Eyes</h1>
     <p className={classes.subheader}>Click on an image to learn more. </p>
 
-    <Collapse in={open}>
-        <Alert
-          action={
-            <IconButton id="iconButton"
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpen(false);
-              }}
-            >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-          }
-        >
-          This photo has been marked for purchase!
-        </Alert>
-      </Collapse>
     <div className={classes.row}>
       {photos && photos.map(r => {
         return (
