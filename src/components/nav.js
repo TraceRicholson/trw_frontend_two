@@ -25,7 +25,9 @@ function Navbar() {
     <AppBar className={classes.bar} position="static">
       <Toolbar>
         <Link to="/home" className={classes.link}>
+        <Button color="inherit">
           <img src = {ResLogo} alt = 'resfeber logo' width='50'/>
+        </Button>
         </Link>
         <Link to="/photography" className={classes.link}>
           <Button color="inherit">Photography</Button>
