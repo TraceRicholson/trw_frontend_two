@@ -100,11 +100,11 @@ export default function Live () {
     centerMode: true,
     // variableWidth: true
   }
-  const photosUrl = 'http://localhost:5000/photos/nature'
+  const photosUrl = 'http://localhost:5000/photos/live'
 
   useEffect(() => {
     let getPhotos = async () => {
-      let response = await fetch('http://localhost:5000/photos/nature')
+      let response = await fetch('http://localhost:5000/photos/live')
       let data = await response.json()
       setPhotos(data);
     }
