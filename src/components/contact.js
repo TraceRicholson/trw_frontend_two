@@ -14,6 +14,7 @@ import {
   makeStyles,
   createTheme,
 } from '@material-ui/core/styles';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#a78824",
     marginTop: "3%",
     marginBottom: "0%",
-    
+
   },
   logo: {
     width: "100vw",
@@ -75,7 +76,8 @@ export default function Contact () {
   const classes = useStyles();
 
   return (
-
+    <Box bgcolor="text.secondary" alignItems="center"
+    justifyContent="center" p={4} >
     <div className={classes.row}>
 
     <h1 className={classes.title}>Contact Page</h1>
@@ -124,6 +126,7 @@ export default function Contact () {
     </form>
 
     </div>
+    </Box>
   )
 }
 

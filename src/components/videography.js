@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles({
   row: {
@@ -36,7 +37,8 @@ export default function CinematicWork () {
 
 
   return (
-
+    <Box bgcolor="text.secondary" alignItems="center"
+    justifyContent="center" p={4} >
     <div className={classes.row}>
 
       <p className={classes.title}>The Fire Ball</p>
@@ -47,10 +49,13 @@ export default function CinematicWork () {
           <li>Visual Effects Management & Projection</li>
         </ul>
       <p className={classes.subTitle}>Below you will find the aftermovies and promos created for past events.</p>
+
       <iframe width="1280" height="720" src="https://www.youtube.com/embed/KdkCGvTyzmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <iframe width="1280" height="720" src="https://www.youtube.com/embed/_th1JV9TCL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <iframe width="1280" height="720" src="https://www.youtube.com/embed/EVOiOqa-qB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    </Box>
+
   )
 }
 

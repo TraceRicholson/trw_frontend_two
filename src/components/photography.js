@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import { Box } from '@material-ui/core';
 
 
 const useStyles = makeStyles({
@@ -99,6 +100,8 @@ let galleryCovers = [
   { title : 'Halestorm.1', category: 'live', description: 'Lzzy Hale of Halestorm holds up her guitar after performing a song.', metadata: 'metadata test', image_url: 'https://www.dropbox.com/s/v0s1ymg71auvklr/Live%20Here-20.jpg?raw=1'}]
 
   return (
+    <Box bgcolor="text.secondary" alignItems="center"
+    justifyContent="center" p={4} >
     <div className={classes.page}>
     <h1 className={classes.title}>A World Through My Lens</h1>
     <p className={classes.subheader}>Click on an image to view the gallery. </p>
@@ -125,5 +128,6 @@ let galleryCovers = [
     })}
     </div>
     </div>
+    </Box>
   )
 }

@@ -39,7 +39,8 @@ export default function Festival () {
 
 
   return (
-
+  <Box bgcolor="text.secondary" alignItems="center"
+      justifyContent="center" p={4} >
     <div className={classes.row}>
 
       <p className={classes.title}>Eaux Claires</p>
@@ -48,5 +49,6 @@ export default function Festival () {
       <iframe width="1280" height="720" src="https://www.youtube.com/embed/LA8Ke48z9Mw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <iframe width="1280" height="720" src="https://www.youtube.com/embed/QkjUK8ngv4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    </Box>
   )
 }

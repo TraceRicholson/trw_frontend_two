@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
+import Box from '@material-ui/core/Box'
 
 const useStyles = makeStyles({
   row: {
@@ -48,6 +49,8 @@ export default function Enter () {
   // }
   return (
 
+      <Box bgcolor="text.secondary" alignItems="center"
+      justifyContent="center" p={4} >
     <div className={classes.row}>
       <h1 className={classes.title}>Resfeber Studios</h1>
       <p className={classes.subTitle}>RESFEBER: (pronounced: RACE-fay-ber); Swedish; noun. 1. The restless race of the traveler's heart before the journey begins.</p>
@@ -56,10 +59,11 @@ export default function Enter () {
 
       <p className={classes.subTitle}>I pride myself in presenting Resfeber Studios as a business that operates without discrimination.  Diversity is paramount, and it's what makes this world beautiful. By discriminating against a certain race, religion, gender, sexual orientation, etc. we fail to make this world a better place.</p>
 
-      <p className={classes.subTitle}>- Trace Richolson, Owner & Founder</p>  
+      <p className={classes.subTitle}>- Trace Richolson, Owner & Founder</p>
 
 
     </div>
+      </Box>
   )
 }
 

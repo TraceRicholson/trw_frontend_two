@@ -1,4 +1,5 @@
 import Navbar from './components/nav'
+import Footer from './components/footer'
 import Enter from './components/enter'
 import Home from './components/home'
 import Photography from './components/photography'
@@ -70,6 +71,7 @@ function App() {
                 <Route exact path="/festivals" component={Festival}/>
                 <Route exact path="/contact" component={Contact}/>
         </AnimatedSwitch>
+        <Footer/>
 
     </div>
   )
