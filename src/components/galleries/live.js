@@ -86,7 +86,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function Nature () {
+export default function Live () {
   const classes = useStyles();
   const [photos, setPhotos] = useState([])
   console.log('photos', photos)

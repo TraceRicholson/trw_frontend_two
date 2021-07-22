@@ -3,15 +3,17 @@ import Enter from './components/enter'
 import Home from './components/home'
 import Photography from './components/photography'
 import Nature from './components/galleries/nature'
+import Live from './components/galleries/live'
+import Weddings from './components/galleries/weddings'
 import Festival from './components/festival'
 import CinematicWork from './components/videography'
-// import RecipeDetails from './components/recipeDetails'
+import Contact from './components/contact'
 import { Switch, Route} from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-// import { TransitionGroup, CSSTransition} from 'react-transition-group'
 import { AnimatedSwitch, spring } from 'react-router-transition'
-// import { useLocation } from 'react-router-dom'
 import './assets/styles.css'
+
+
 function mapStyles(styles) {
   return {
     opacity: styles.opacity,
@@ -64,8 +66,11 @@ function App() {
                 <Route exact path="/home" component={Home}/>
                 <Route exact path="/photography/" component={Photography}/>
                 <Route exact path="/photography/nature" component={Nature}/>
+                <Route exact path="/photography/live" component={Live}/>
+                <Route exact path="/photography/weddings" component={Weddings}/>
                 <Route exact path="/cinematic_work" component={CinematicWork}/>
                 <Route exact path="/festivals" component={Festival}/>
+                <Route exact path="/contact" component={Contact}/>
         </AnimatedSwitch>
 
     </div>

@@ -40,18 +40,18 @@ const useStyles = makeStyles({
     justifyContent: 'space-evenly',
   },
   title: {
-    fontFamily: "'Bebas Neue', 'cursive'",
+    fontFamily: "'Prestage', 'regular'",
     fontSize: "6vw",
     marginTop: "3%",
     marginBottom: "0%",
-    color: "#FFFFFF"
+    color: "#a78824"
   },
   subheader: {
-    fontFamily: "'Bebas Neue', 'cursive'",
+    fontFamily: "'Prestage', 'regular'",
     fontSize: "2vw",
     marginTop: "3%",
     marginBottom: "0%",
-    color: "#FFFFFF"
+    color: "#a78824"
   },
   button: {
     marginTop: "10px",
@@ -96,7 +96,9 @@ let galleryCovers = [
   //NATURE
   { title : 'Vast', category: 'nature', description: 'A top-down view of a section of frozen river.', metadata: 'metadata test', image_url: 'https://www.dropbox.com/s/dnb5jabv90fb30g/Richolson%2C%20Trace.%20VAST.%20archival%20pigment%20ink%20on%20paper%2C%206.6%20x%209.9%20in%2C%202016.jpg?raw=1'},
   //WEDDINGS
-  ,]
+  ,
+  //LIVE MUSIC
+  { title : 'Halestorm.1', category: 'live', description: 'Lzzy Hale of Halestorm holds up her guitar after performing a song.', metadata: 'metadata test', image_url: 'https://www.dropbox.com/s/v0s1ymg71auvklr/Live%20Here-20.jpg?raw=1'}]
 
   return (
     <div className={classes.page}>

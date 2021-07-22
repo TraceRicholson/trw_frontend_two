@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   title: {
-    fontFamily: "'Bebas Neue', 'cursive'",
+    fontFamily: 'Prestage',
     fontSize: "10vw",
     color: "#a78824",
     marginTop: "3%",
