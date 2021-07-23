@@ -125,6 +125,7 @@ export default function Nature () {
 return (
 
   <div>
+      
 
       <div className={classes.row}>
       {photos && photos.map(r => {

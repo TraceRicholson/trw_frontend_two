@@ -14,6 +14,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom'
 import { config } from '../../assets/constants'
+import Box from '@material-ui/core/Box'
 
 
 const useStyles = makeStyles({
@@ -49,11 +50,13 @@ const useStyles = makeStyles({
     // backgroundColor: 'black'
   },
   title: {
-    fontFamily: "'Prestage', 'cursive'",
+    fontFamily: 'Prestage',
     fontSize: "6vw",
+    color: "#a78824",
     marginTop: "3%",
     marginBottom: "0%",
-    color: "black"
+    marginLeft: "10%",
+    marginRight: "10%"
   },
   subheader: {
     fontFamily: "'Prestage', 'cursive'",
@@ -126,9 +129,14 @@ export default function Urban () {
 return (
 
   <div>
-
+    <Box bgcolor="text.secondary" alignItems="center"
+      justifyContent="center" p={4} >
       <div className={classes.row}>
-      {photos && photos.map(r => {
+
+        <p className={classes.title}>UNDER CONSTRUCTION</p>
+
+
+      {/* {photos && photos.map(r => {
         return (
           <Card key={r.id} className={classes.root}>
           <Link to={`/photography/${r.category}`} className={classes.link}>
@@ -146,9 +154,11 @@ return (
             </CardActionArea>
           </Link>
           </Card>)
-    })}
+    })} */}
     </div>
 
+
+      </Box>
       </div>)
 }
 }
