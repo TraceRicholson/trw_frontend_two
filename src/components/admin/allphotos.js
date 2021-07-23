@@ -72,8 +72,9 @@ export default function AllPhotos () {
 
   const classes = useStyles();
   const [photos, setPhotos] = useState([])
-  let photosUrl = config.url.API_URL
+  const photosUrl = config.url.API_URL
   console.log('environment', config.url.API_URL)
+
 
   useEffect(() => {
     let getPhotos = async () => {
