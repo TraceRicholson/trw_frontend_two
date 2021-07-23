@@ -43,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100vw",
     height:"100vh"
   },
+  multilineColor: {
+    color: 'white'
+  },
   // textField: {
   //   marginLeft: theme.spacing(1),
   //   marginRight: theme.spacing(1),
@@ -69,6 +72,10 @@ const ValidationTextField = withStyles({
       padding: '4px !important', // override inline-style
       color: 'white'
     },
+    multilineColor: {
+      color: 'white'
+    },
+
   },
 })(TextField);
 
@@ -90,6 +97,9 @@ export default function Contact () {
           variant="outlined"
           // defaultValue="Name"
           id="validation-outlined-input"
+          InputProps={{
+            className: classes.multilineColor
+          }}
 
       /><br></br>
       <ValidationTextField
@@ -99,6 +109,9 @@ export default function Contact () {
           variant="outlined"
           // defaultValue="Email"
           id="validation-outlined-input"
+          InputProps={{
+            className: classes.multilineColor
+          }}
       /><br></br>
       <ValidationTextField
           className={classes.margin}
@@ -107,6 +120,9 @@ export default function Contact () {
           variant="outlined"
           // defaultValue="Subject"
           id="validation-outlined-input"
+          InputProps={{
+            className: classes.multilineColor
+          }}
       /><br></br>
       <TextField
             id="outlined-multiline-static"
@@ -118,6 +134,9 @@ export default function Contact () {
             variant="outlined"
             width={50}
             fullWidth
+            InputProps={{
+              className: classes.multilineColor
+            }}
       /><br></br>
       <Button variant="contained" color="primary">
         Submit

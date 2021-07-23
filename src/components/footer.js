@@ -32,6 +32,9 @@ export default function Footer() {
   return (
     <AppBar className={classes.bar} position="static">
       <Toolbar className={classes.copy}>
+          <Link to="/admin" className={classes.link}>
+            <Button color="inherit">Admin</Button>
+          </Link>
         © 2021 Resfeber Stuidos
 
           <Button color="inherit" href='https://www.youtube.com/channel/UClc0S_x5xcPCrmNrlFGXnCQ'>

@@ -8,10 +8,13 @@ import Live from './components/galleries/live'
 import Festival from './components/festival'
 import CinematicWork from './components/videography'
 import Contact from './components/contact'
+import Admin from './components/admin/admin'
+import AllPhotos from './components/admin/allphotos'
 import { Switch, Route} from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import { AnimatedSwitch, spring } from 'react-router-transition'
 import './assets/styles.css'
+import firebase from "firebase";
 
 
 function mapStyles(styles) {
@@ -49,9 +52,10 @@ const bounceTransition = {
 };
 
 function App() {
-
+  const firebaseApp = firebase.apps[0];
 
   return (
+
     <div>
 
         <Navbar/>
@@ -70,10 +74,13 @@ function App() {
                 <Route exact path="/cinematic_work" component={CinematicWork}/>
                 <Route exact path="/festivals" component={Festival}/>
                 <Route exact path="/contact" component={Contact}/>
+                <Route exact path="/admin" component={Admin}/>
+                <Route exact path="/admin/all_photos" component={AllPhotos}/>
         </AnimatedSwitch>
         <Footer/>
 
     </div>
+
   )
 }
 

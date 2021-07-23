@@ -48,6 +48,7 @@ function Navbar() {
         <Link to="/contact" className={classes.link}>
           <Button color="inherit">Contact Us</Button>
         </Link>
+        
       </Toolbar>
     </AppBar>
   )

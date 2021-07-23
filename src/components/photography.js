@@ -8,9 +8,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
 import { Box } from '@material-ui/core';
-
+import { Link } from 'react-router-dom';
+import { config } from '../assets/constants';
 
 const useStyles = makeStyles({
   root: {
@@ -82,9 +82,12 @@ export default function Photography() {
   console.log('photos', photos)
   const [open, setOpen] = useState(false)
 
+  let photosUrl = config.url.API_URL
+  console.log('environment', config.url.API_URL)
+
   useEffect(() => {
     let getPhotos = async () => {
-      let response = await fetch('http://localhost:5000/photos')
+      let response = await fetch(photosUrl)
       let data = await response.json()
       setPhotos(data)
     }

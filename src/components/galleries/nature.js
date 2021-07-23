@@ -13,6 +13,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom'
+import { config } from '../../assets/constants'
+
 
 const useStyles = makeStyles({
   root: {
@@ -100,11 +102,12 @@ export default function Nature () {
     centerMode: true,
     // variableWidth: true
   }
-  const photosUrl = 'http://localhost:5000/photos/nature'
+  let photosUrlNature = config.url.API_URL_NATURE
+  console.log('environment', config.url.API_URL_NATURE)
 
   useEffect(() => {
     let getPhotos = async () => {
-      let response = await fetch('http://localhost:5000/photos/nature')
+      let response = await fetch(photosUrlNature)
       let data = await response.json()
       setPhotos(data);
     }
