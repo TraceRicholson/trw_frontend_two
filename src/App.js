@@ -53,6 +53,7 @@ const bounceTransition = {
 
 function App() {
   const firebaseApp = firebase.apps[0];
+  console.log({ REACT_APP_API_ENDPOINT: process.env.REACT_APP_API_ENDPOINT })
 
   return (
 

@@ -23,6 +23,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-dev": "env-cmd -e development npm run-script build",
+    "build-qa": "env-cmd -e qa npm run-script build",
+    "build-staging": "env-cmd -e staging npm run-script build",
+    "build-prod": "env-cmd -e production npm run-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

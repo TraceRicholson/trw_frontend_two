@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { Link } from 'react-router-dom'
+import { config } from '../../assets/constants'
 
 const useStyles = makeStyles({
   root: {
@@ -71,10 +72,12 @@ export default function AllPhotos () {
 
   const classes = useStyles();
   const [photos, setPhotos] = useState([])
+  let photosUrl = config.url.API_URL
+  console.log('environment', config.url.API_URL)
 
   useEffect(() => {
     let getPhotos = async () => {
-      let response = await fetch('http://localhost:5000/photos')
+      let response = await fetch(photosUrl)
       let data = await response.json()
       console.log('favorites', data)
       setPhotos(data)
@@ -106,7 +109,7 @@ export default function AllPhotos () {
             <CardActions className={classes.page}>
               <Button className={classes.button} linksize="small" color="primary"
                 onClick={()=>{
-                  fetch('http://localhost:5000/photos', {
+                  fetch(photosUrl, {
                     method: 'DELETE',
                     headers: {'Content-Type': 'application/json; charset=utf-8'},
                     body: JSON.stringify({id: p.id, title: p.title, category: p.category, description: p.description, metadata: p.metadata, image_url: p.image_url})
