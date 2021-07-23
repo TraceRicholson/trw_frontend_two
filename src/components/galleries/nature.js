@@ -125,7 +125,6 @@ export default function Nature () {
 return (
 
   <div>
-    <h2> The World Through My Eyes</h2>
 
       <div className={classes.row}>
       {photos && photos.map(r => {

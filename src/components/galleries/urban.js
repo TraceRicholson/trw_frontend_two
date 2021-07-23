@@ -87,7 +87,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function Live () {
+export default function Urban () {
   const classes = useStyles();
   const [photos, setPhotos] = useState([])
   console.log('photos', photos)
@@ -101,8 +101,8 @@ export default function Live () {
     centerMode: true,
     // variableWidth: true
   }
-  let photosUrlLive = config.url.API_URL_LIVE
-  console.log('environment', config.url.API_URL_LIVE)
+  let photosUrlLive = config.url.API_URL_URBAN
+  console.log('environment', config.url.API_URL_URBAN)
 
 
   useEffect(() => {

@@ -5,6 +5,7 @@ import Home from './components/home'
 import Photography from './components/photography'
 import Nature from './components/galleries/nature'
 import Live from './components/galleries/live'
+import Urban from './components/galleries/urban'
 import Festival from './components/festival'
 import CinematicWork from './components/videography'
 import Contact from './components/contact'
@@ -72,6 +73,7 @@ function App() {
                 <Route exact path="/photography/" component={Photography}/>
                 <Route exact path="/photography/nature" component={Nature}/>
                 <Route exact path="/photography/live" component={Live}/>
+                <Route exact path="/photography/urban" component={Urban}/>
                 <Route exact path="/cinematic_work" component={CinematicWork}/>
                 <Route exact path="/festivals" component={Festival}/>
                 <Route exact path="/contact" component={Contact}/>
