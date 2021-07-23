@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/Input';
@@ -17,6 +17,7 @@ import {
 import { Box } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import { MenuItem } from '@material-ui/core';
+import { config } from '../../assets/constants';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -89,12 +90,71 @@ const categoriesInput = [
 
 export default function Admin () {
   const classes = useStyles();
-  const [categories, setCategories] = useState(categoriesInput);
-  console.log('categories', categories)
+  const [newPhoto, addNewPhoto] = useState ([])
+  const photosUrl = config.url.API_URL
+  console.log('environment', config.url.API_URL)
 
-  const handleChange = (event) => {
-    setCategories(event.target.value);
+  const [title, setTitle] = useState('')
+  const [categories, setCategories] = useState([]);
+  console.log('categories', categories)
+  const [description, setDescription] = useState('')
+  const [metadata, setMetadata] = useState('')
+  const [imageUrl, setImageUrl] = useState('')
+
+
+
+
+
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+    console.log('title', title)
   };
+
+  const handleCategoryChange = (e) => {
+    setCategories(e.target.value);
+    console.log('category', categories)
+  };
+
+  const handleDescriptionChange = (e) => {
+    setDescription(e.target.value);
+    console.log('description', description)
+  };
+
+  const handleMetadataChange = (e) => {
+    setMetadata(e.target.value);
+    console.log('metadata', metadata)
+  };
+
+  const handleImageUrlChange = (e) => {
+    setImageUrl(e.target.value);
+    console.log('imageUrl', imageUrl)
+  };
+
+
+  const handleSubmit = (e) => {
+    addNewPhoto({
+      title: title,
+      category: categories,
+      description: description,
+      metadata: metadata,
+      image_url: imageUrl
+    })
+    console.log("New photo added: ", newPhoto)
+  }
+
+  useEffect(() => {
+    function addPhoto() {
+      fetch(photosUrl, {
+        method: 'POST',
+        body: JSON.stringify(newPhoto),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
+    }
+    addPhoto();
+  }, [newPhoto]);
 
   return (
     <Box bgcolor="text.primary" alignItems="center"
@@ -116,6 +176,8 @@ export default function Admin () {
           helperText=""
           fullWidth
           margin="normal"
+          value={title}
+          onChange={handleTitleChange}
           InputProps={{
             className: classes.multilineColor
           }}
@@ -125,32 +187,13 @@ export default function Admin () {
           }}
         />
         <TextField
-          id="standard-select-currency"
-          select
-          label="Category"
-          value={categoriesInput}
-          onChange={handleChange}
-          helperText="Please select a category"
-          InputProps={{
-            className: classes.multilineColor
-          }}
-          InputLabelProps={{
-            shrink: true,
-            className: classes.multilineColor
-          }}
-        >
-          {categories.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-        <TextField
           id="standard-full-width"
 
-          label="Label"
+          label="Category"
+          value={categories}
+          onChange={handleCategoryChange}
           style={{ margin: 8 }}
-          placeholder="Placeholder"
+          placeholder="nature, urban, or live"
           helperText=""
           fullWidth
           margin="normal"
@@ -166,6 +209,8 @@ export default function Admin () {
           id="standard-full-width"
 
           label="Description"
+          value={description}
+          onChange={handleDescriptionChange}
           style={{ margin: 8 }}
           placeholder="Description"
           helperText=""
@@ -183,6 +228,8 @@ export default function Admin () {
           id="standard-full-width"
 
           label="Metadata"
+          value={metadata}
+          onChange={handleMetadataChange}
           style={{ margin: 8 }}
           placeholder="Metadata"
           helperText=""
@@ -200,6 +247,8 @@ export default function Admin () {
           id="standard-full-width"
 
           label="Image URL"
+          value={imageUrl}
+          onChange={handleImageUrlChange}
           style={{ margin: 8 }}
           placeholder="Paste the Dropbox RAW link here..."
           helperText=""
@@ -213,6 +262,11 @@ export default function Admin () {
             className: classes.multilineColor
           }}
         />
+          <Button
+              linksize="small" color="primary" className={classes.button}
+              onClick={handleSubmit}>
+              Submit
+          </Button>
       </div>
 
     </form>
