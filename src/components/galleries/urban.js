@@ -102,8 +102,8 @@ export default function Urban () {
     centerMode: true,
     // variableWidth: true
   }
-  let photosUrlUrban = config.url.API_URL_URBAN
-  console.log('environment', config.url.API_URL_URBAN)
+  let photosUrlUrban = config.url.API_URL_NATURE
+  console.log('environment', config.url.API_URL_NATURE)
 
 
   useEffect(() => {
