@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom'
 import { config } from '../../assets/constants'
 
+
 const useStyles = makeStyles({
   root: {
     maxWidth: "24vw",
@@ -101,13 +102,13 @@ export default function Urban () {
     centerMode: true,
     // variableWidth: true
   }
-  let photosUrlLive = config.url.API_URL_URBAN
+  let photosUrlUrban = config.url.API_URL_URBAN
   console.log('environment', config.url.API_URL_URBAN)
 
 
   useEffect(() => {
     let getPhotos = async () => {
-      let response = await fetch(photosUrlLive)
+      let response = await fetch(photosUrlUrban)
       let data = await response.json()
       setPhotos(data);
     }
