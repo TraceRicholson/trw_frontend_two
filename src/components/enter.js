@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
 import Box from '@material-ui/core/Box'
+import intro from '../assets/resfeberintro.gif'
 
 const useStyles = makeStyles({
   row: {
@@ -34,8 +35,9 @@ export default function Enter () {
 
     {/* <h1 className={classes.title}>Resfeber Studios</h1> */}
     <Link to="/home">
-      <video className={classes.logo} autoPlay src='https://www.dropbox.com/s/pfai4s84lwgs0pp/resfeberintro.mp4?raw=1' type='video/mp4' >
-      </video>
+      {/* <video className={classes.logo} autoPlay src='https://www.dropbox.com/s/pfai4s84lwgs0pp/resfeberintro.mp4?raw=1' type='video/mp4' >
+      </video> */}
+      <img src={intro} alt='resfeber intro'></img>
     </Link>
     </div>
     </Box>
