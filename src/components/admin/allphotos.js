@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { Link } from 'react-router-dom'
 import { config } from '../../assets/constants'
+import  Box  from '@material-ui/core/Box'
 
 const useStyles = makeStyles({
   root: {
@@ -87,6 +88,8 @@ export default function AllPhotos () {
   }, [])
 
   return (
+    <Box bgcolor="text.primary" alignItems="center"
+    justifyContent="center" height='100vh' p={4} >
     <div className={classes.page}>
     <h1 className={classes.title}>ALL DATABASE PHOTOS</h1>
     <div className={classes.row}>
@@ -125,5 +128,6 @@ export default function AllPhotos () {
     })}
     </div>
     </div>
+    </Box>
   )
 }
