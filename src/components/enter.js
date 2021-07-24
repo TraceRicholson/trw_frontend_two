@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
 import Box from '@material-ui/core/Box'
-import intro from '../assets/resfeberintro.gif'
+
 
 const useStyles = makeStyles({
   row: {
@@ -26,6 +26,7 @@ const useStyles = makeStyles({
 
 export default function Enter () {
   const classes = useStyles();
+  const intro = 'https://www.dropbox.com/s/b22rm11nsp0gk56/resfeberintro1.gif?raw=1'
 
 
   return (
