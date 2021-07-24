@@ -1,4 +1,4 @@
-# Resfeber Studios (frontend)
+# ![Resfeber Studios Logo](https://www.dropbox.com/s/wz26v4t9i5sk4q1/resfeberlogo_readme.png?raw=1) Resfeber Studios (frontend)
 This repo is a personal project, where I have built out a portfolio to display all the work I've done DBA Resfeber Studios.
 
 # Table of Contents:
