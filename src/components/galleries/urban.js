@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom'
 import { config } from '../../assets/constants'
 import Box from '@material-ui/core/Box'
+import logo from '../../assets/resfeberlogo2.png'
 
 
 const useStyles = makeStyles({
@@ -105,8 +106,8 @@ export default function Urban () {
     centerMode: true,
     // variableWidth: true
   }
-  let photosUrlUrban = config.url.API_URL_NATURE
-  console.log('environment', config.url.API_URL_NATURE)
+  let photosUrlUrban = config.url.API_URL_URBAN
+  console.log('environment', config.url.API_URL_URBAN)
 
 
   useEffect(() => {
@@ -133,10 +134,12 @@ return (
       justifyContent="center" p={4} >
       <div className={classes.row}>
 
-        <p className={classes.title}>UNDER CONSTRUCTION</p>
+        <p className={classes.title}>///</p>
+        <p className={classes.title}>URBAN</p>
+        <p className={classes.title}>\\\</p>
 
 
-      {/* {photos && photos.map(r => {
+      {photos && photos.map(r => {
         return (
           <Card key={r.id} className={classes.root}>
           <Link to={`/photography/${r.category}`} className={classes.link}>
@@ -154,7 +157,7 @@ return (
             </CardActionArea>
           </Link>
           </Card>)
-    })} */}
+    })}
     </div>
 
 
