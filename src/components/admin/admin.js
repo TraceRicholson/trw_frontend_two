@@ -6,7 +6,7 @@ import FormHelperText from '@material-ui/core/Input';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { green } from '@material-ui/core/colors';
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import {
   alpha,
   ThemeProvider,
@@ -35,11 +35,20 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
+
   title: {
     fontFamily: "'Prestage', 'cursive'",
     fontSize: "6vw",
     color: "red",
     marginTop: "3%",
+    marginBottom: "0%",
+
+  },
+  subTitle: {
+    fontFamily: "'Prestage', 'cursive'",
+    fontSize: "6vw",
+    color: "red",
+    marginTop: "10%",
     marginBottom: "0%",
 
   },
@@ -100,6 +109,7 @@ export default function Admin () {
   const [description, setDescription] = useState('')
   const [metadata, setMetadata] = useState('')
   const [imageUrl, setImageUrl] = useState('')
+  const [loggedIn, setLoggedIn] = useState(false)
 
 
 
@@ -156,12 +166,32 @@ export default function Admin () {
     addPhoto();
   }, [newPhoto]);
 
-  return (
-    <Box bgcolor="text.primary" alignItems="center"
-    justifyContent="center" p={4} >
-    <div className={classes.row}>
+  function handleLogin () {
+    setLoggedIn(true)
+    if (loggedIn===true) {
+    document.getElementById('admin-block').hidden = true
+    document.getElementById('admin-page').hidden = false
+    }
+  }
 
-    <h1 className={classes.title}>Welcome, Admin</h1>
+
+  return (
+    <div >
+
+      <Box bgcolor="text.primary" id='admin-block' alignItems="center"
+    justifyContent="center" p={4} hidden={false}>
+        <div className={classes.row} >
+          <p className={classes.subTitle}>You must be logged in to access the admin page.</p>
+          <Button color="primary" onClick={handleLogin}>Enter</Button>
+        </div>
+      </Box>
+
+    <Box bgcolor="text.primary" id='admin-page' alignItems="center"
+    justifyContent="center" p={4} hidden={true}>
+    <div className={classes.row} >
+
+
+    <h1 className={classes.title} >Welcome, Admin</h1>
       <Link to="/admin/all_photos" className={classes.link}>
         <Button color="inherit">Manage Database Photos</Button>
       </Link>
@@ -270,8 +300,11 @@ export default function Admin () {
       </div>
 
     </form>
+
     </div>
     </Box>
+    </div>
   )
+
 }
 
