@@ -12,26 +12,26 @@ This repo is a personal project, where I have built out a portfolio to display a
 [Licensing](#licensing)<br/>
 
 # What exactly is this?
-We're so glad you asked.  Robot Kitchen is a website containing a select, currated list of recipes for your tasting enjoyment.  It's a simple way to get the recipe you want without having to read 20 paragraphs about a person.  This really is the ultimate recipe website you've been searching for your whole life.
+Resfeber Studios is my side project, and this website is a place to showcase my work and give people an avenue to reach out.
 
 # How do I install this?
 Easy!  See steps 1 - 53 below.
 
 Kidding.  As this is a personal project, this repo is copyrighted and unavailable for personal use.  :(
 
-If you would like to visit the site, you are more than welcome to do so at: [INSERT LINK HERE]
+If you would like to visit the site, you are more than welcome to do so at: https://www.resfeberstudios.com
 
 
 
 # How do I use this?
 
-Click on this link: []
+Click on this link: https://www.resfeberstudios.com
 
 # Related Projects:
-BAckend for this projet: https://github.com/TraceRicholson/trw_backend
+Backend for this projet: https://github.com/TraceRicholson/trw_backend
 
 # Who created this thing anyway?
-That's a fantastic question.  One we definitely have an answer to.  First, we'll need you to sign a Non-Disclosure Agreement (NDA).  Just in case the "Ricky" incident happens again.  Poor Ricky...
+That's a fantastic question.  One we definitely have an answer to.  First, we'll need you to sign a Non-Disclosure Agreement (NDA).  Just in case the "Jamie" incident happens again.  First Ricky, and now Jamie.  Poor Jamie...
 
 Now that you've signed that, below is a list of our team members and GitHub usernames in case you want to see other random projects we've created:<br/>
 
@@ -45,6 +45,10 @@ Too bad, you can't.  This project is for cool kids only. :(
 
 # What are your plans for the future?
 E V E R Y T H I N G
+- Enable contact form submission.
+- Setup login credentails to lock out the admin page from hooligans.
+- Add more photos.
+- ?
 
 # Licensing
-This website and repo are property and coprighted by Resfeber Studios, LLC.  Any personal use is unauthorized.  
+This website and repo are property and coprighted by Resfeber Studios, LLC.  Any personal use is unauthorized.
