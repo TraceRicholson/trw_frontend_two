@@ -55,8 +55,8 @@ export default function Festival () {
     <div className={classes.row}>
     <p className={classes.title}>Eaux Claires</p>
 
-      <p className={classes.subTitle}>From 2016 - 2019, Trace servered as the Assitant Creative Director for the Eaux Claires Music and Arts Festival, helping to currate and manage the "Arts" side of the festival.  Below, you will find a selection of photos and videos from the festival showcasing this partnership.  Past visual artists are shown below:</p>
-
+      <p className={classes.subTitle}>From 2016 - 2019, Trace servered as the Assitant Creative Director for the Eaux Claires Music and Arts Festival, helping to currate and manage the "Arts" side of the festival.  Below, you will find a selection of videos from the festival showcasing this partnership.  </p>
+{/*
       <ul className={classes.subTitleList}>
         <li>Serra Victoria Bothwell Fels</li>
         <li>The Pickup Music Project</li>
@@ -79,7 +79,7 @@ export default function Festival () {
         <li>Eleanor Perry Smith</li>
         <li>Michael Perry</li>
         <li>Holli Jacobson</li>
-        </ul>
+        </ul> */}
 
 
 

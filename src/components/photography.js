@@ -104,7 +104,7 @@ let galleryCovers = [
 
   return (
     <Box bgcolor="text.secondary" alignItems="center"
-    justifyContent="center" p={4} >
+    justifyContent="center" height='100vh' p={4} >
     <div className={classes.page}>
     <h1 className={classes.title}>A World Through My Lens</h1>
     <p className={classes.subheader}>Click on an image to view the gallery. </p>

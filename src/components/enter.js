@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
+import Box from '@material-ui/core/Box'
 
 const useStyles = makeStyles({
   row: {
@@ -21,30 +22,23 @@ const useStyles = makeStyles({
   }
 });
 
+
 export default function Enter () {
   const classes = useStyles();
 
-  // let hasPlayed = false;
-  // function handleFirstPlay(e) {
-  //   if(hasPlayed === false) {
-  //     hasPlayed = true;
 
-  //     let vid = event.target;
-
-  //     vid.onplay = null;
-  //   }
-  // }
   return (
-
+    <Box bgcolor="text.primary" alignItems="center"
+    justifyContent="center" height='100vh'p={4} >
     <div className={classes.row}>
 
     {/* <h1 className={classes.title}>Resfeber Studios</h1> */}
     <Link to="/home">
-      <video className={classes.logo} autoPlay>
-        <source src='https://www.dropbox.com/s/pfai4s84lwgs0pp/resfeberintro.mp4?raw=1' type='video/mp4' allow='autoplay'></source>
+      <video className={classes.logo} autoPlay src='https://www.dropbox.com/s/pfai4s84lwgs0pp/resfeberintro.mp4?raw=1' type='video/mp4' >
       </video>
     </Link>
     </div>
+    </Box>
   )
 }
 

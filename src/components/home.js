@@ -50,7 +50,7 @@ export default function Enter () {
   return (
 
       <Box bgcolor="text.secondary" alignItems="center"
-      justifyContent="center" p={4} >
+      justifyContent="center" height='100vh' p={4} >
     <div className={classes.row}>
       <h1 className={classes.title}>Resfeber Studios</h1>
       <p className={classes.subTitle}>RESFEBER: (pronounced: RACE-fay-ber); Swedish; noun. 1. The restless race of the traveler's heart before the journey begins.</p>

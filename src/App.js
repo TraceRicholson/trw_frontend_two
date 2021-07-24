@@ -52,6 +52,13 @@ const bounceTransition = {
   },
 };
 
+// function handleEnter() {
+//   if (enterPage===true) {
+//   document.getElementById('admin-block').hidden = true
+//   document.getElementById('admin-page').hidden = false
+//   }
+// }
+
 function App() {
   const firebaseApp = firebase.apps[0];
   console.log({ REACT_APP_API_ENDPOINT: process.env.REACT_APP_API_ENDPOINT })
@@ -60,7 +67,7 @@ function App() {
 
     <div>
 
-        <Navbar/>
+        <Navbar />
         <AnimatedSwitch
           atEnter={bounceTransition.atEnter}
           atLeave={bounceTransition.atLeave}
@@ -80,7 +87,7 @@ function App() {
                 <Route exact path="/admin" component={Admin}/>
                 <Route exact path="/admin/all_photos" component={AllPhotos}/>
         </AnimatedSwitch>
-        <Footer/>
+        <Footer />
 
     </div>
 

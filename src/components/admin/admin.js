@@ -18,6 +18,10 @@ import { Box } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import { MenuItem } from '@material-ui/core';
 import { config } from '../../assets/constants';
+import Alert from '@material-ui/lab/Alert';
+import IconButton from '@material-ui/core/IconButton';
+import Collapse from '@material-ui/core/Collapse';
+import CloseIcon from '@material-ui/icons/Close';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -73,30 +77,6 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const WhiteTextTypography = withStyles({
-  root: {
-    color: "#FFFFFF"
-  },
-
-})(Typography);
-
-const categoriesInput = [
-  {
-    value: 'live',
-    label: 'live',
-  },
-  {
-    value: 'nature',
-    label: 'nature',
-  },
-  {
-    value: 'urban',
-    label: 'urban',
-  },
-];
-
-
-
 export default function Admin () {
   const classes = useStyles();
   const [newPhoto, addNewPhoto] = useState ([])
@@ -110,7 +90,7 @@ export default function Admin () {
   const [metadata, setMetadata] = useState('')
   const [imageUrl, setImageUrl] = useState('')
   const [loggedIn, setLoggedIn] = useState(false)
-
+  const [open, setOpen] = useState(false)
 
 
 
@@ -177,9 +157,8 @@ export default function Admin () {
 
   return (
     <div >
-
       <Box bgcolor="text.primary" id='admin-block' alignItems="center"
-    justifyContent="center" p={4} hidden={false}>
+    justifyContent="center" p={4} height='100vh' hidden={false}>
         <div className={classes.row} >
           <p className={classes.subTitle}>You must be logged in to access the admin page.</p>
           <Button color="primary" onClick={handleLogin}>Enter</Button>
@@ -187,11 +166,33 @@ export default function Admin () {
       </Box>
 
     <Box bgcolor="text.primary" id='admin-page' alignItems="center"
-    justifyContent="center" p={4} hidden={true}>
+    justifyContent="center" p={4} height='100vh' hidden={true}>
     <div className={classes.row} >
 
 
     <h1 className={classes.title} >Welcome, Admin</h1>
+
+
+    <Collapse in={open}>
+        <Alert
+          action={
+            <IconButton id="iconButton"
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          }
+        >
+          The photo has been added to the database.
+        </Alert>
+      </Collapse>
+
+
       <Link to="/admin/all_photos" className={classes.link}>
         <Button color="inherit">Manage Database Photos</Button>
       </Link>
@@ -254,7 +255,7 @@ export default function Admin () {
             className: classes.multilineColor
           }}
         />
-        <TextField
+        {/* <TextField
           id="standard-full-width"
 
           label="Metadata"
@@ -272,7 +273,7 @@ export default function Admin () {
             shrink: true,
             className: classes.multilineColor
           }}
-        />
+        /> */}
         <TextField
           id="standard-full-width"
 
@@ -280,7 +281,7 @@ export default function Admin () {
           value={imageUrl}
           onChange={handleImageUrlChange}
           style={{ margin: 8 }}
-          placeholder="Paste the Dropbox RAW link here..."
+          placeholder="Paste the Dropbox RAW link (or random url) here..."
           helperText=""
           fullWidth
           margin="normal"
@@ -294,7 +295,10 @@ export default function Admin () {
         />
           <Button
               linksize="small" color="primary" className={classes.button}
-              onClick={handleSubmit}>
+              onClick={ () => {
+                handleSubmit()
+                setOpen(true)
+              }}>
               Submit
           </Button>
       </div>

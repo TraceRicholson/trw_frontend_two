@@ -22,10 +22,12 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
+
+
 function Navbar() {
   const classes = useStyles();
   return (
-    <AppBar className={classes.bar} position="fixed">
+    <AppBar className={classes.bar} position="fixed" >
       <Toolbar>
         <Link to="/home" className={classes.link}>
           <Button color="inherit">
@@ -48,7 +50,7 @@ function Navbar() {
         <Link to="/contact" className={classes.link}>
           <Button color="inherit">Contact Us</Button>
         </Link>
-        
+
       </Toolbar>
     </AppBar>
   )
