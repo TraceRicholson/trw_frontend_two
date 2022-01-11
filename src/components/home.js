@@ -55,9 +55,9 @@ export default function Enter () {
       <h1 className={classes.title}>Resfeber Studios</h1>
       <p className={classes.subTitle}>RESFEBER: (pronounced: RACE-fay-ber); Swedish; noun. 1. The restless race of the traveler's heart before the journey begins.</p>
 
-      <p className={classes.subTitle}>Resfeber Studios is currently based out of Eglin Air Force Base, Florida.  I started Resfeber Studios with a goal to bring the world of projection mapping to a city with a rapidly growing music and arts scene.  In the past five years, Resfeber Studios has grown into a multi-faceted business, specializing in not only projection mapping, but also event management, cinematography, and photography.</p>
+      <p className={classes.subTitle}>Resfeber Studios is currently based out of Denver, Colorado.  I started Resfeber Studios with a goal to bring the world of projection mapping to a city with a rapidly growing music and arts scene.  In the past five years, Resfeber Studios has grown into a multi-faceted business, specializing in not only projection mapping, but also event management, cinematography, and photography.</p>
 
-      <p className={classes.subTitle}>I pride myself in presenting Resfeber Studios as a business that operates without discrimination.  Diversity is paramount, and it's what makes this world beautiful. By discriminating against a certain race, religion, gender, sexual orientation, etc. we fail to make this world a better place.</p>
+      <p className={classes.subTitle}>I pride myself in presenting Resfeber Studios as a American based and founded business that operates on a value of staying true to my roots. </p>
 
       <p className={classes.subTitle}>- Trace Richolson, Owner & Founder</p>
 

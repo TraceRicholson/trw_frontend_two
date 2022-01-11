@@ -42,7 +42,7 @@ export default function CinematicWork () {
     <div className={classes.row}>
 
       <p className={classes.title}>The Fire Ball</p>
-      <p className={classes.subTitle}>From 2015-2018, Resfeber Studios provided design services for The Fire Ball™, of which include content management, visual design, scenic features, and aftermovie creation. "The Fire Ball™ is UW-Eau Claire's drag ball extravaganza! Each year, The Fire Ball™ is headlined by drag superstars from RuPaul's Drag Race (past performers include Latrice Royale, Alyssa Edwards, Raven, Kennedy Davenport, Chad Michaels, Shangela, Katya, Bob the Drag Queen, Detox, Sharon Needles, Manila Luzon, Asia O’Hara, and Monét X Change), and they are complemented by several amazing drag queens and drag kings who are, in one word, FIERCE!"  Services provided by Resfeber Studios include:</p>
+      <p className={classes.subTitle}>From 2015-2018, Resfeber Studios provided design services for The Fire Ball™, of which include content management, visual design, scenic features, and aftermovie creation. "The Fire Ball™ is UW-Eau Claire's drag ball extravaganza! Each year, The Fire Ball™ is headlined by drag superstars from RuPaul's Drag Race (past performers include Latrice Royale, Alyssa Edwards, Raven, Kennedy Davenport, Chad Michaels, Shangela, Katya, Bob the Drag Queen, Detox, Sharon Needles, Manila Luzon, Asia O’Hara, and Monét X Change), and they are complemented by several outstanding drag queens and drag kings who are, in one word, FIERCE!"  Services provided by Resfeber Studios include:</p>
         <ul className={classes.subTitle}>
           <li>Official Aftermovie Creation</li>
           <li>LED Art Installations</li>
